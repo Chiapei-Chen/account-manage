@@ -26,7 +26,7 @@ const {
 
 const createDialog = useAccountCreate(addAccount)
 const editDialog = useAccountEdit(replaceAccount)
-const { deletingId, deleteAccount } = useAccountDelete(removeAccount)
+const { deletingId, errorMessage: deleteErrorMessage, deleteAccount } = useAccountDelete(removeAccount)
 
 const roleLabel = (roleLevel: Account['roleLevel']) => ROLE_LEVEL_LABELS[roleLevel]
 const statusLabel = (status: Account['status']) => ACCOUNT_STATUS_LABELS[status]
@@ -98,6 +98,8 @@ const handleLogout = () => {
         <span>+</span> 新增帳號
       </button>
     </div>
+
+    <p v-if="deleteErrorMessage" class="text-[#e0405a] text-sm text-center mb-4">{{ deleteErrorMessage }}</p>
 
     <div class="grid grid-cols-3 gap-3.5 mb-7">
       <div class="p-4 border border-[#eceef5] rounded-xl">
