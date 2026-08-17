@@ -5,7 +5,7 @@ import { RoleLevel, AccountStatus, type Account, type CreateAccountPayload } fro
 const emptyForm = (): CreateAccountPayload => ({
   name: '',
   email: '',
-  roleLevel: RoleLevel.USER,
+  roleLevel: RoleLevel.ADMIN,
   status: AccountStatus.ON,
 })
 
