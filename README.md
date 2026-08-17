@@ -31,9 +31,11 @@
    啟動後預設可用瀏覽器開啟 `http://localhost:5173` 查看。
 
 專案架構總覽
-
+   ```
 技術棧：Vue 3 (<script setup>) + TypeScript + Vite 8 + Vue Router 5 + Pinia 4 + Tailwind CSS 4 + Axios
+   ```
 
+   ```
 src/
 ├─ main.ts              # 進入點：掛載 App、註冊 Pinia、Router
 ├─ App.vue              # 根元件，只有 <RouterView />
@@ -60,3 +62,5 @@ src/
          ├─ AccountFormFields.vue   # 共用表單欄位
          ├─ CreateAccount.vue
          └─ EditAccount.vue
+
+   ```
